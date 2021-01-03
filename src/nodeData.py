@@ -1,15 +1,17 @@
 
 class nodeData:
-    key: int
-    pos: tuple
-
-    def __init__(self, key: int = None, pos: tuple = None):
-
-        self.id = key
+    def __init__(self, key: int , pos: tuple):
+        self.__id = key
         self.weight = 0
-        self.pos = pos
+        self.__pos = pos
         self.tag = 0
 
-    def __str__(self):
-        print(self.id,self.weight,self.pos,self.tag)
+    def getId(self) -> int:
+        return self.__id
 
+    def getPos(self) -> tuple:
+        return self.__pos
+
+    def __str__(self):
+        return "nodeData(id: %s , weight: %s , pos: %s  )" % (
+            self.__id, self.weight, self.__pos)
