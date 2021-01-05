@@ -57,6 +57,7 @@ class DiGraph(GraphInterface):
                 return True
 
     def add_node(self, node_id: int, pos: tuple = None) -> bool:
+
         if node_id in self.__nodes_graph:
             return False
         else:
@@ -71,10 +72,10 @@ class DiGraph(GraphInterface):
         else:
             edges_in = self.all_in_edges_of_node(node_id)
             edges_out = self.all_out_edges_of_node(node_id)
-            self.__mc+= len(edges_in)
-            self.__mc+= len(edges_out)
-            self.__edgeSize-= len(edges_in)
-            self.__edgeSize-= len(edges_out)
+            self.__mc += len(edges_in)
+            self.__mc += len(edges_out)
+            self.__edgeSize -= len(edges_in)
+            self.__edgeSize -= len(edges_out)
             for x in edges_in:
                 self.__edges_graph.get(x).pop(node_id)
             self.__edges_graph.pop(node_id)
@@ -95,3 +96,7 @@ class DiGraph(GraphInterface):
             self.__mc += 1
             self.__edgeSize -= 1
             return True
+
+    def __repr__(self):
+        return "Graph(Vetexs: %s , Edges: %s )" % (
+            self.__nodes_graph, self.__edges_graph)

@@ -1,5 +1,7 @@
 from edgeData import edgeData
 from DiGraph import DiGraph
+
+
 if __name__ == '__main__':
    edge=edgeData(0,1,500)
    edge.info="23112312"
@@ -52,3 +54,9 @@ if __name__ == '__main__':
    print(g.remove_edge(1,0))
    print(g.remove_edge(0, 1))
    print(g.remove_edge(0, 1))
+
+   g.add_node(7)
+   print(g.v_size())
+   g.remove_node(7)
+   print(g.v_size())
+   print(g.e_size())

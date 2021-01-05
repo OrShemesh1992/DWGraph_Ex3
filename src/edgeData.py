@@ -13,7 +13,7 @@ class edgeData:
     def getW(self) -> float:
         return self.__w
 
-    def __str__(self):
+    def __repr__(self):
         return "EdgeData(src: %s , dest: %s , w: %s  )" % (
             self.__src, self.__dest, self.__w)
 

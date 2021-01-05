@@ -12,6 +12,6 @@ class nodeData:
     def getPos(self) -> tuple:
         return self.__pos
 
-    def __str__(self):
+    def __repr__(self):
         return "nodeData(id: %s , weight: %s , pos: %s  )" % (
             self.__id, self.weight, self.__pos)
