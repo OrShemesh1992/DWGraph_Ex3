@@ -6,8 +6,11 @@ from GraphInterface import GraphInterface
 from queue import PriorityQueue
 import json
 import math
+
+
 class GraphAlgo(GraphAlgoInterface):
-    def __init__(self,graph:DiGraph):
+
+    def __init__(self, graph: DiGraph):
         self.graph = graph
 
     def get_graph(self) -> GraphInterface:
@@ -45,13 +48,13 @@ class GraphAlgo(GraphAlgoInterface):
          if id1 not in self.graph.get_all_v() or id2 not in self.graph.get_all_v():
              return (-1,[])
          if id1 is id2:
-             return (0,[id1]) # bdika
+             return (0, [id1]) # bdika
          #init all varibales in node
          self.init_all()
-         q=PriorityQueue()
-         node=self.graph.get_all_v()[id1]
+         q = PriorityQueue()
+         node = self.graph.get_all_v()[id1]
          node.weight = 0
-         q.put((node.weight , node))
+         q.put((node.weight, node))
 
          while not q.empty():
              v=q.get()[1]
@@ -76,9 +79,9 @@ class GraphAlgo(GraphAlgoInterface):
 
     def init_all(self):
         for node in self.graph.get_all_v().values():
-            node.weight=math.inf
-            node.tag=0
-            node.info=""
+            node.weight = math.inf
+            node.tag = 0
+            node.info = ""
 
     def connected_component(self, id1: int) -> list:
         pass
