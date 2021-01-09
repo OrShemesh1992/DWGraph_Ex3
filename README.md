@@ -5,13 +5,18 @@ Building a system that builds a weighted and directed graph.
 This project was the last part in building directed and weighted graphs.
 In the previous project we created a Pokemon game based on a deliberate and weighted graph in the Java language.
 
- in this project we learned to build a directed and weighted graph in the Python programming language, we learned to make the differences in writing the functions and algorithms between the different languages,
+In this project we learned to build a directed and weighted graph in the Python programming language, we learned to make the differences in writing the functions and algorithms between the different languages,
 And we have created similar classes and algorithms in order to make comparisons between projects and runtimes between different functions.
+
+- This project contains the algorithms - to find the shortest route,
+Find the binding elements in the graph.
+1) dijekstra- uses to find the shortest path in a directed weighted graph.
+2) tarjan- uses to find the binding elements in the graph
 
 - On the wiki pages can not see the comparison between the graphs, functions and runtimes of the 2 projects.
 
 ### The classes of the project :
-**** The nodeData: ****
+### The nodeData: 
 In this class we have implemented operations at a node (vertex) in a weighted graph (directional).
 id, location, weight, tag of each vertex. 
 
@@ -20,12 +25,12 @@ In this class we performed operations on the edges of the graph.
 Each edge consists of 2 nodes - src and dest and each edgee has a weight.
 
 ### The DiGraph:
-We created the hashmap within a hashmap that will contain the vertices of the graph along with their sides and weight.
+- We created the hashmap within a hashmap that will contain the vertices of the graph along with their sides and weight.
 The first hashmap contains the vertices that each vertex actually has the hashmap (which is the second) that contains the neighbors of their end data. That is, this side is two vertices connected together with the distance between them. And so you can reach every vertex in the graph and its neighbors.
-Connection function - add edge connected 2 neighboring vertices src and dest with the direction of the trajectory and formed a side from src to, dest together with the weight of the side which is the distance between them.
-Finally, the goal is to create a weighted and directed graph consisting of nodes and ribs connecting them. And more in this class we have created functions that add and delete nodes and ribs with their weights and with the distance between the different nodes. And functions that return the number of sides and nodes found in the chart as well as the number of operations we did in the graph. And also functions that create a collection of all vertices.
+- Connection function - add edge connected 2 neighboring vertices src and dest with the direction of the trajectory and formed a side from src to, dest together with the weight of the side which is the distance between them.
+- Finally, the goal is to create a weighted and directed graph consisting of nodes and ribs connecting them. And more in this class we have created functions that add and delete nodes and ribs with their weights and with the distance between the different nodes. And functions that return the number of sides and nodes found in the chart as well as the number of operations we did in the graph. And also functions that create a collection of all vertices.
 
-- The methods we practiced in this department:
+### The methods we practiced in this department:
 
 |         Name       |    Description   |                                                                                                                                 
 | ------------------ | ----------------       |
@@ -61,6 +66,8 @@ If so, the call repeats, leaving the at in the stack to keep the variable. If no
 consisting of at along with later nodes in a stack of at (such nodes have paths back to at, but not to any previous node, 
 because if they had paths to previous nodes So at will also have paths to previous nodes and that's a lie).
 The connected component rooted in at node from the stack and is returned, retaining the variable again
+
+![image](https://i.ytimg.com/vi/TyWtx7q2D7Y/maxresdefault.jpg)
 	
 ### Using the dijkstra algorithm:
 It gets 2 nodes- src and dest should go from the src node to the destination node and go through the nodes with the lowest weight.
@@ -82,7 +89,7 @@ And we will put it in the shampoo .parentNodes for the same node,
 the new parent was also updated, through which we reached a node with a lower weight.
 And so for each node up to the node, we set to reach the graph.
 
--### The methods we practiced in this department:
+### The methods we practiced in this department:
 
 |         Name       |    Description   |                                                                                                                                 
 | ------------------ | ----------------       |
