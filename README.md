@@ -10,9 +10,8 @@ And we have created similar classes and algorithms in order to make comparisons 
 
 - On the wiki pages can not see the comparison between the graphs, functions and runtimes of the 2 projects.
 
-### We have created different classes:
-
-### The nodeData: 
+### The classes of the project :
+**** The nodeData: ****
 In this class we have implemented operations at a node (vertex) in a weighted graph (directional).
 id, location, weight, tag of each vertex. 
 
@@ -66,33 +65,43 @@ The connected component rooted in at node from the stack and is returned, retain
 ### Using the dijkstra algorithm:
 It gets 2 nodes- src and dest should go from the src node to the destination node and go through the nodes with the lowest weight.
 - The algorithm works as follows: 
-First we will initialize all the weights of the nodes to infinity so that we know which node we have not yet updated, 
+- First we will initialize all the weights of the nodes to infinity so that we know which node we have not yet updated, 
  and then we set a priority queue that will contain the nodes we will visit and update their weights.
-In addition, we created the parentNodes shamp that will eventually contain the updated nodes through which we passed the shortest trajectory in the graph,
+- In addition, we created the parentNodes shamp that will eventually contain the updated nodes through which we passed the shortest trajectory in the graph,
 from the vertex src and dest.
 We enter the first node and initialize its weight to 0, and all the other nodes in the graph are initialized to infinity. 
 The current junction will include all of its neighbors and will update its temporary weights.
 The weight of each node is updated according to the parent weight of that node plus the temporary distance between them which is the weight at the end.
 Then the same junction we started with becomes the father of this junction and leaves the queue, it is already marked that we have already visited it and we will not return to it again.
-Each of the neighbors presented treats him in the same way:
+
+- Each of the neighbors presented treats him in the same way:
 Put his neighbors in line and update their weights.
 Each node can have several neighbors and then also some fathers through which they come, so if one of the neighbors is already updated in weight because we reached it through another parent node, we will check through which neighbor it will be the lowest weight node, then we will keep the lower weight.
-We will remove the node from the queue and return it with the updated weight. And we will put it in the shampoo .parentNodes for the same node,
-the new parent was also updated, through which we reached a node with a lower weight. And so for each node up to the node, we set to reach the graph.
+We will remove the node from the queue and return it with the updated weight.
+And we will put it in the shampoo .parentNodes for the same node,
+the new parent was also updated, through which we reached a node with a lower weight.
+And so for each node up to the node, we set to reach the graph.
 
-- The methods we practiced in this department:
+-### The methods we practiced in this department:
 
 |         Name       |    Description   |                                                                                                                                 
 | ------------------ | ----------------       |
 |  get_graph            | the directed graph on which the algorithm works on |                                    
 |load_from_json           | Loads a graph from a json file.  |  
 | save_to_json         |  Saves the graph in JSON format to a file |                                    
-|  shortest_path          | shortest path from node id1 to node id2 using Dijkstra's Algorithm|  
+|  shortest_path          | shortest path from node id1 to node id2 using Dijkstra's Algorithm- return tuple of two objects (length of the path, list of nodes that are in the path)|  
 |  connected_component            |Finds the Strongly Connected Component(SCC) that node id1 is a part of. |                                    
 |connected_components         |Finds all the Strongly Connected Component(SCC) in the graph.  |  
 | plot_graph        |Plots the graph.  If the nodes have a position, the nodes will be placed there, Otherwise, they will be placed in a random but elegant manner.|    
 
 
+# in conclusion:
+In this project we created a directed and weighted graph-
+According to the different departments, we built a system that builds a graph from nodes that each have a unique key and sides that connect the adjacent nodes, different data structures that contain the nodes, and we added weights to each node in the graph and also distance to each side connecting 2 vertices.
+We checked the shortest paths between each vertex.
+And we examined all the binding components in the graph. And we used two algorithms - dijekstra and tarjan for different operations.
+In addition, we used save and load to load and save the Jason-shaped graphs.
+Next, we made comparisons between the 3 functions in this project in Python and the previous project in Java.
 
     
 
