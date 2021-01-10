@@ -1,4 +1,5 @@
 # DWGraph_Ex3
+<img src="https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.0-9/137204839_4245883572095318_5195765541934772574_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=egaAvkaxoQIAX_rWadX&_nc_ht=scontent.ftlv1-1.fna&oh=96896ac801a3f8aff5132972f90ef82e&oe=60203E5D" width="650" height="390">
 
 ## The purpose of the project:
 Building a system that builds a weighted and directed graph.
@@ -67,8 +68,7 @@ consisting of at along with later nodes in a stack of at (such nodes have paths 
 because if they had paths to previous nodes So at will also have paths to previous nodes and that's a lie).
 The connected component rooted in at node from the stack and is returned, retaining the variable again
 
-![image](https://i.ytimg.com/vi/TyWtx7q2D7Y/maxresdefault.jpg)
-	
+<img src="https://i.ytimg.com/vi/TyWtx7q2D7Y/maxresdefault.jpg" width="400" height="200">	
 ### Using the dijkstra algorithm:
 It gets 2 nodes- src and dest should go from the src node to the destination node and go through the nodes with the lowest weight.
 - The algorithm works as follows: 
@@ -80,6 +80,8 @@ We enter the first node and initialize its weight to 0, and all the other nodes 
 The current junction will include all of its neighbors and will update its temporary weights.
 The weight of each node is updated according to the parent weight of that node plus the temporary distance between them which is the weight at the end.
 Then the same junction we started with becomes the father of this junction and leaves the queue, it is already marked that we have already visited it and we will not return to it again.
+
+<img src="https://programmersought.com/images/409/2b48d95d78d688f88100bd7312b6b8d1.JPEG" width="400" height="250">
 
 - Each of the neighbors presented treats him in the same way:
 Put his neighbors in line and update their weights.
