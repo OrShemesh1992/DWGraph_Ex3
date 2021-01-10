@@ -11,11 +11,11 @@ def check():
     (3.4, [0, 1, 2, 3])
     [[0, 1], [2], [3]]
     (2.8, [0, 1, 3])
-    (inf, None)
+    (inf, [])
     2.062180280059253 [1, 10, 7]
     17.693921758901507 [47, 46, 44, 43, 42, 41, 40, 39, 15, 16, 17, 18, 19]
     11.51061380461898 [20, 21, 32, 31, 30, 29, 14, 13, 3, 2]
-    inf None
+    inf []
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]]
     """
@@ -32,22 +32,11 @@ def check0():
     g = DiGraph()  # creates an empty directed graph
     for n in range(4):
         g.add_node(n)
-    print(g.get_all_v())
-    print("bdika v_size",g.v_size())
     g.add_edge(0, 1, 1)
-    print("bdika e_size", g.e_size())
-    g.remove_edge(0,1)
-    print("bdika e_size", g.e_size())
-    g.add_edge(0, 1, 1)
-    print("bdika e_size", g.e_size())
+    g.add_edge(1, 0, 1.1)
     g.add_edge(1, 2, 1.3)
-    g.add_edge(2, 1, 2.1)
     g.add_edge(2, 3, 1.1)
-    g.add_edge(3, 1, 1.9)
-    print(g.all_out_edges_of_node(2))
-    print(g.all_in_edges_of_node(2))
-    print(g.all_in_edges_of_node(1))
-    print(g.all_in_edges_of_node(3))
+    g.add_edge(1, 3, 1.9)
     g.remove_edge(1, 3)
     g.add_edge(1, 3, 10)
     print(g)  # prints the __repr__ (func output)

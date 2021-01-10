@@ -70,12 +70,16 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(True, False)
 
     def test_connected_components(self):
-            graph = DiGraph()
-            self.assertEqual(True, False)
+        graph1=GraphAlgo()
+
+        graph = DiGraph()
+        self.assertEqual(True, False)
 
     def test_plot_graph(self):
             graph = DiGraph()
             self.assertEqual(True, False)
+
+
 
 
 if __name__ == '__main__':

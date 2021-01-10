@@ -14,7 +14,6 @@ class edgeData:
         return self.__w
 
     def __repr__(self):
-        return "EdgeData(src: %s , dest: %s , w: %s  )" % (
-            self.__src, self.__dest, self.__w)
-
+        return "%s" % (
+             self.__w)
 
