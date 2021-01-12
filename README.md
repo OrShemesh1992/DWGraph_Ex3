@@ -69,6 +69,7 @@ because if they had paths to previous nodes So at will also have paths to previo
 The connected component rooted in at node from the stack and is returned, retaining the variable again
 
 <img src="https://i.ytimg.com/vi/TyWtx7q2D7Y/maxresdefault.jpg" width="400" height="200">	
+
 ### Using the dijkstra algorithm:
 It gets 2 nodes- src and dest should go from the src node to the destination node and go through the nodes with the lowest weight.
 - The algorithm works as follows: 
