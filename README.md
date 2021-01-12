@@ -15,7 +15,7 @@ Find the binding elements in the graph.
 2) tarjan- uses to find the binding elements in the graph
 
 - On the wiki pages can not see the comparison between the graphs, functions and runtimes of the 2 projects.
-<img src="https://scontent.ftlv16-1.fna.fbcdn.net/v/t1.0-9/138111613_4252652031418472_7731923244884839777_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=ebMLOS6He0EAX9_AMkk&_nc_ht=scontent.ftlv16-1.fna&oh=12e21ef1c13f57771fb34f54521e19b7&oe=602415B0" width="250" height="150">   <img src="https://scontent.ftlv16-1.fna.fbcdn.net/v/t1.0-9/138081809_4252652044751804_4853881090946136399_o.jpg?_nc_cat=100&ccb=2&_nc_sid=730e14&_nc_ohc=TP7y31W0RxwAX_keep6&_nc_ht=scontent.ftlv16-1.fna&oh=6bcf73e12e551a81a4f66143ab903958&oe=6021DF58" width="250" height="150">
+<img src="https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/138064004_4252865398063802_2532825376174938053_o.jpg?_nc_cat=102&ccb=2&_nc_sid=730e14&_nc_ohc=OFvK8R_XqHkAX_0E6X5&_nc_ht=scontent.ftlv5-1.fna&oh=d7e8e65513d636759f3e5f4b8dffa8a5&oe=60239655" width="250" height="150"> <img src="https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/138187228_4252865394730469_1967892766406936052_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=9wwfPHYsHyAAX9m4mzc&_nc_ht=scontent.ftlv5-1.fna&oh=7d2365c26a1df9b9842fc509482e7d3a&oe=6024561B" width="250" height="150">
 
 ### The classes of the project :
 ### The nodeData: 
