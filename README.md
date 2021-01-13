@@ -54,35 +54,44 @@ The first hashmap contains the vertices that each vertex actually has the hashma
 - 2) Dijkstra - to find the shortest route in the graph, and to return the list of sides in the shortest route in the graph. In methods: shortestpathDist, shortestpath
 
 ### Using the tarjan algorithm:
-- First depth search (DFS) starts from a node that receives from the isConnected function
-(passes over nodedata) the nodes are located on a stack in the order of their visit.
-When the first depth search recursively visits the at node and its descendants, 
-those nodes do not necessarily suck out of the pile when this recursive call returns.
-The essential unchanging characteristic is that a node remains in a stack after its visit if and only if there is a path
-in the input graph from it to any node earlier in the stack. 
-In other words, in DFS a junction is removed from the stack only after crossing all of its connected paths.
-When the DFS goes back it will remove the nodes in a single path and return to the root to start a new path.
-- At the end of the conversation that criticizes at and his descendants, 
-we know if at itself has a path to each node earlier in the stack. 
-If so, the call repeats, leaving the at in the stack to keep the variable. If not, then at must be the root of its strongly connected component,
-consisting of at along with later nodes in a stack of at (such nodes have paths back to at, but not to any previous node, 
-because if they had paths to previous nodes So at will also have paths to previous nodes and that's a lie).
-The connected component rooted in at node from the stack and is returned, retaining the variable again
-
-<img src="https://i.ytimg.com/vi/TyWtx7q2D7Y/maxresdefault.jpg" width="400" height="200">	
-
+- This algorithm is iterative constructed.
+It does go through a weighted directed graph on the node stack that starts empty and stores the history of the nodes that have been
+ explored but are not yet committed to a tightly connected component.
+As nodes made distributed when the search returns up the tree;
+They only pop up when a well-connected whole component is found.
+The outermost loop searches each node that has not yet been visited, and makes sure that the nodes made accessible,
+from the first node still passing through.
+- Find all the heirs from the node_at node, and report all the well-connected components of the same sub-graph.
+When each node finishes returning, if its low link is still set to its index,
+So this is the root node of a tightly connected component, created by all the nodes above it in the stack.
+- The algorithm raises the pile to the current node and includes it, displaying all of these nodes as a tightly connected component.
+That is, each binding element is marked by the same id of the parent vertex of that binding element,
+and then the binding elements marked in the graph are returned, or of a particular vertex -
+return the path of its binding element or the list of all the binding elements in the graph.
+- It serves us as a solution to 2 functions:
+Connected_component
+Connected_components
+    
 ### Using the dijkstra algorithm:
-It gets 2 nodes- src and dest should go from the src node to the destination node and go through the nodes with the lowest weight.
-- The algorithm works as follows: 
-- First we will initialize all the weights of the nodes to infinity so that we know which node we have not yet updated, 
- and then we set a priority queue that will contain the nodes we will visit and update their weights.
-- In addition, we created the parentNodes shamp that will eventually contain the updated nodes through which we passed the shortest trajectory in the graph,
-from the vertex src and dest.
-We enter the first node and initialize its weight to 0, and all the other nodes in the graph are initialized to infinity. 
-The current junction will include all of its neighbors and will update its temporary weights.
-The weight of each node is updated according to the parent weight of that node plus the temporary distance between them which is the weight at the end.
-Then the same junction we started with becomes the father of this junction and leaves the queue, it is already marked that we have already visited it and we will not return to it again.
-
+- Dijkstra's algorithm: An algorithm for finding the shortest paths between nodes in a graph
+he gets 2 nodes- id1 and -id2 should get from the src(id1) node to the dest(id2) node and go through the nodes with the lowest weight.
+- We will first initialize all the weights of the nodes to infinity so that we know which node we have not yet updated,
+and then we set a priority queue that will contain the nodes we will visit and update their weights.
+Each node he visited will be marked as a visit (correct), 
+and that way we will know if we visited this node or not, 
+- In the priority queue, we enter the first node and initialize its weight to 0
+For the current junction,we will include all its neighbors and update their temporary weights.
+The weight of each node is updated according to the parent weight of that node plus the temporary distance between them which is the weight on the edge.
+- Then the same node we started with becomes the father of this node and leaves the queue, 
+it is marked as one we have already visited and we will not return to it again. 
+Each of the introduced neighbors treats him the same way:
+putting his neighbors in line and updating their weights.
+so if one of the neighbors is already updated with weight because we reached it through another father-node,
+- then we will check through which neighbor that node will have the lowest weight, then we will keep the lower weight.
+We will take the node out of the queue and return it with the updated weight. 
+To the same junction is also updated the new father through which we reached a junction with a lower weight.
+And so for each node up to the node, we set to reach in the graph.
+  
 <img src="https://programmersought.com/images/409/2b48d95d78d688f88100bd7312b6b8d1.JPEG" width="400" height="250">
 
 - Each of the neighbors presented treats him in the same way:
