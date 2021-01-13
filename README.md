@@ -14,8 +14,9 @@ Find the binding elements in the graph.
 1) dijekstra- uses to find the shortest path in a directed weighted graph.
 2) tarjan- uses to find the binding elements in the graph
 
-- On the wiki pages can not see the comparison between the graphs, functions and runtimes of the 2 projects.
-<img src="https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/138064004_4252865398063802_2532825376174938053_o.jpg?_nc_cat=102&ccb=2&_nc_sid=730e14&_nc_ohc=OFvK8R_XqHkAX_0E6X5&_nc_ht=scontent.ftlv5-1.fna&oh=d7e8e65513d636759f3e5f4b8dffa8a5&oe=60239655" width="250" height="150"> <img src="https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/138187228_4252865394730469_1967892766406936052_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=9wwfPHYsHyAAX9m4mzc&_nc_ht=scontent.ftlv5-1.fna&oh=7d2365c26a1df9b9842fc509482e7d3a&oe=6024561B" width="250" height="150">
+### On the wiki pages can not see the comparison between the graphs, functions and runtimes of the 2 projects.
+
+<img src="https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/138064004_4252865398063802_2532825376174938053_o.jpg?_nc_cat=102&ccb=2&_nc_sid=730e14&_nc_ohc=OFvK8R_XqHkAX_0E6X5&_nc_ht=scontent.ftlv5-1.fna&oh=d7e8e65513d636759f3e5f4b8dffa8a5&oe=60239655" width="250" height="150"> <img src="https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/138187228_4252865394730469_1967892766406936052_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=9wwfPHYsHyAAX9m4mzc&_nc_ht=scontent.ftlv5-1.fna&oh=7d2365c26a1df9b9842fc509482e7d3a&oe=6024561B" width="250" height="150"> <img src="https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.0-9/138398538_4256043114412697_196483155632851615_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=5Odt5lLN8W8AX9qchSP&_nc_ht=scontent.ftlv1-1.fna&oh=727fe83d825d3cb101c13a421bc4e62d&oe=60249738" width="250" height="150">
 
 ### The classes of the project :
 ### The nodeData: 
