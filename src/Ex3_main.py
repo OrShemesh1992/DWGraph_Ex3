@@ -1,7 +1,6 @@
 from DiGraph import DiGraph
 from GraphAlgo import GraphAlgo
 
-
 def check():
     """
     Graph: |V|=4 , |E|=5

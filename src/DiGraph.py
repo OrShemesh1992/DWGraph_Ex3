@@ -1,6 +1,6 @@
-from GraphInterface import GraphInterface
-from edgeData import edgeData
-from nodeData import nodeData
+from src.GraphInterface import GraphInterface
+from src.edgeData import edgeData
+from src.nodeData import nodeData
 from typing import Dict
 
 
@@ -32,28 +32,23 @@ class DiGraph(GraphInterface):
         return self.__nodes_graph
 
     def all_in_edges_of_node(self, id1: int) -> dict:
-        """return a dictionary of all the nodes connected to (into) node_id ,
-              each node is represented using a pair (key, weight)
-               """
+
+        """return a dictionary of all the nodes connected to (into) node_id
+        each node is represented using a pair (key, weight)
+            """
         edges_graph: Dict[int, edgeData] = dict()
-        count_in = 0
         for i in self.__nodes_graph:
             if id1 in self.__edges_graph.get(i):
                 edges_graph.__setitem__(i, self.__edges_graph.get(i)[id1])
-                count_in += 1
+                self.__nodes_graph.get(id1).in_edges += 1
         return edges_graph
 
     def all_out_edges_of_node(self, id1: int) -> dict:
-        """return a dictionary of all the nodes connected from node_id , each node is represented using a pair (key,
-               weight)
-               """
         edges_graph: Dict[int, edgeData] = dict()
-        count_out = 0
         if id1 in self.__nodes_graph:
             for temp in self.__edges_graph.get(id1):
-                # print("key:",temp,"value: " ,self.edges_graph.get(id1)[temp])
-                edges_graph.__setitem__(temp,self.__edges_graph.get(id1)[temp])
-                count_out += 1
+                edges_graph.__setitem__(temp, self.__edges_graph.get(id1)[temp])
+                self.__nodes_graph.get(id1).out_edges += 1
         return edges_graph
 
     def get_mc(self) -> int:
@@ -83,11 +78,11 @@ class DiGraph(GraphInterface):
         if id2 in self.__edges_graph.get(id1):
             return False
         else:
-                edge = edgeData(id1, id2, weight)
-                self.__edges_graph.get(id1).__setitem__(id2, edge)
-                self.__mc += 1
-                self.__edgeSize += 1
-                return True
+            edge = edgeData(id1, id2, weight)
+            self.__edges_graph.get(id1).__setitem__(id2, edge)
+            self.__mc += 1
+            self.__edgeSize += 1
+            return True
 
     def add_node(self, node_id: int, pos: tuple = None) -> bool:
         """
@@ -152,18 +147,20 @@ class DiGraph(GraphInterface):
             self.__edgeSize -= 1
             return True
 
+    def __eq__(self, other: object)->bool:
+        if not (isinstance(other, DiGraph)) or (other is None):
+            return False
+        if self.e_size() != other.e_size():
+            return False
+        if self.v_size() != other.v_size():
+            return False
+        for i in self.__nodes_graph.keys():
+            if i not in other.get_all_v():
+                return False
+            for k in self.all_out_edges_of_node(i).keys():
+                if k not in other.all_out_edges_of_node(i):
+                    return False
+        return True
+
     def __repr__(self) -> str:
-        _str = f"Graph: |V|={self.v_size()} , |E|={self.e_size()}\n"
-        _str += "{"
-        count = 0
-        for nodes in self.__nodes_graph.keys():
-            count += 1
-            _str += f"{nodes}: {nodes}: |edges out| "
-            _str += f"{len(self.all_out_edges_of_node(nodes).keys())} "
-            _str += "|edges in| "
-            _str += f"{len(self.all_in_edges_of_node(nodes).keys())} "
-        if len(self.__nodes_graph.keys()) == count:
-            _str += "}"
-        else:
-            _str += ", "
-        return _str
+        return "Graph: |V|=%s , |E|=%s"%(self.v_size(),self.e_size())

@@ -1,6 +1,7 @@
 import json
-from DiGraph import DiGraph
-from nodeData import nodeData
+from src.DiGraph import DiGraph
+from src.nodeData import nodeData
+
 
 class DiGraphEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -16,6 +17,7 @@ class DiGraphEncoder(json.JSONEncoder):
                 'Edges': [x for x in lists]
             }
         return json.JSONEncoder.default(self, obj)
+
 
 class NodeDataEncoder(json.JSONEncoder):
     def default(self, obj):

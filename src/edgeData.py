@@ -1,3 +1,6 @@
+# In this class we performed operations on the edges of the graph.
+# Each edge consists of 2 nodes - src and dest and each edgee has a weight.
+
 class edgeData:
     def __init__(self, src: int, dest: int, w: float):
         self.__src = src
@@ -6,14 +9,18 @@ class edgeData:
         self.info = ""
         self.tag = 0
 
-    def getSrc(self) -> int :
+    # return the src
+    def get_src(self) -> int:
         return self.__src
-    def getDest(self) -> int:
+
+    # return the dest
+    def get_dest(self) -> int:
         return self.__dest
-    def getW(self) -> float:
+
+    # return the weight of the edge
+    def get_w(self) -> float:
         return self.__w
 
     def __repr__(self):
         return "%s" % (
-             self.__w)
-
+            self.__w)
