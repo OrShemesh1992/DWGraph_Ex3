@@ -1,8 +1,6 @@
 import timeit
 from src.DiGraph import DiGraph
 from src.GraphAlgo import GraphAlgo
-import sys
-sys.setrecursionlimit(10000)
 
 
 class compare:
@@ -11,18 +9,21 @@ class compare:
         self.g = DiGraph()
         self.graph = GraphAlgo(self.g)
 
-    def getGraph(self):
+    def get_graph(self):
         return self.graph.graph
 
-    def json_runtime(self, str = None):
+    def json_runtime(self, str=None):
         self.graph.load_from_json(str)
         start = timeit.default_timer()
         stop = timeit.default_timer()
         print("run time from jsom file", stop - start)
 
-    def shortest_path(self, str = None):
-        self.graph.load_from_json(str)
+    def shortest_path(self, str=None):
+        print(f"This is a test for :{str} \n")
+        print("Python")
+        print("load method:\n")
         start = timeit.default_timer()
+        self.graph.load_from_json(str)
         f = self.graph.shortest_path(1, 5)
         stop = timeit.default_timer()
         weight = f[0]
@@ -56,32 +57,32 @@ if __name__ == '__main__':
     G = compare()
 
     print("6")
-    G.shortest_path('../data/G_30000_240000_0.json')
-    G.connected('../data/G_30000_240000_0.json')
-    G.json_runtime('../data/G_30000_240000_0.json')
+    G.shortest_path('../data/G_30000_240000_1.json')
+    G.connected('../data/G_30000_240000_1.json')
+    G.json_runtime('../data/G_30000_240000_1.json')
 
-    ("5")
-    G.shortest_path('../data/G_20000_160000_0.json')
-    G.connected('../data/G_20000_160000_0.json')
-    G.json_runtime('../data/G_20000_160000_0.json')
+    print("5")
+    G.shortest_path('../data/G_20000_160000_1.json')
+    G.connected('../data/G_20000_160000_1.json')
+    G.json_runtime('../data/G_20000_160000_1.json')
 
     print("4")
-    G.shortest_path('../data/G_10000_80000_0.json')
-    G.connected('../data/G_10000_80000_0.json')
-    G.json_runtime('../data/G_10000_80000_0.json')
+    G.shortest_path('../data/G_10000_80000_1.json')
+    G.connected('../data/G_10000_80000_1.json')
+    G.json_runtime('../data/G_10000_80000_1.json')
 
     print("3")
-    G.shortest_path('../data/G_1000_8000_0.json')
-    G.connected('../data/G_1000_8000_0.json')
-    G.json_runtime('../data/G_1000_8000_0.json')
+    G.shortest_path('../data/G_1000_8000_1.json')
+    G.connected('../data/G_1000_8000_1.json')
+    G.json_runtime('../data/G_1000_8000_1.json')
     print("2")
 
-    G.shortest_path('../data/G_100_800_0.json')
-    G.connected('../data/G_100_800_0.json')
-    G.json_runtime('../data/G_100_800_0.json')
+    G.shortest_path('../data/G_100_800_1.json')
+    G.connected('../data/G_100_800_1.json')
+    G.json_runtime('../data/G_100_800_1.json')
 
     print("1")
 
-    G.shortest_path('../data/G_10_80_0.json')
-    G.connected('../data/G_10_80_0.json')
-    G.json_runtime('../data/G_10_80_0.json')
+    G.shortest_path('../data/G_10_80_1.json')
+    G.connected('../data/G_10_80_1.json')
+    G.json_runtime('../data/G_10_80_1.json')

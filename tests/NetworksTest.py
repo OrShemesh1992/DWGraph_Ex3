@@ -8,7 +8,7 @@ import timeit
 class MyTestCase(unittest.TestCase):
 
     def test_time(self):
-        p = "../data/G_10_80_0.json"
+        p = "../data/G_30000_240000_1.json"
         with open(p, 'r') as file:
             s = json.load(file)
         g = nx.DiGraph()
