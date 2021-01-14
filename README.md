@@ -121,6 +121,9 @@ And so for each node up to the node, we set to reach the graph.
 
 
 # in conclusion:
+
+<img src="https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.0-9/138619068_4258205694196439_8624874360759478003_o.jpg?_nc_cat=107&ccb=2&_nc_sid=730e14&_nc_ohc=LXM0eQVKMsoAX_w9A4C&_nc_ht=scontent.ftlv1-1.fna&oh=5f0ceebd187b305491b84ae7f1bb5fa7&oe=602593CC" width="420" height="320">
+
 In this project we created a directed and weighted graph-
 According to the different departments, we built a system that builds a graph from nodes that each have a unique key and sides that connect the adjacent nodes, different data structures that contain the nodes, and we added weights to each node in the graph and also distance to each side connecting 2 vertices.
 We checked the shortest paths between each vertex.
