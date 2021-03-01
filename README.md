@@ -1,5 +1,5 @@
 # DWGraph_Ex3
-<img src="https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.0-9/137204839_4245883572095318_5195765541934772574_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=egaAvkaxoQIAX_rWadX&_nc_ht=scontent.ftlv1-1.fna&oh=96896ac801a3f8aff5132972f90ef82e&oe=60203E5D" width="600" height="320">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Shortest_path_with_direct_weights.svg/1200px-Shortest_path_with_direct_weights.svg.png" width="600" height="320">
 
 
 ## The purpose of the project:
